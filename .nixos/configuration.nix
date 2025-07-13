@@ -99,6 +99,7 @@
     ZSH_THEME = "robbyrussell";
   };
 
+  programs.steam.enable = true;
   programs.hyprland.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
@@ -115,12 +116,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
-    jetbrains-toolbox
     gradle
     docker
     stow
     git
     font-awesome
+    btop
 # Hyprland stuff
     hyprland
     hypridle
@@ -133,6 +134,7 @@
     sway-audio-idle-inhibit
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
+    pavucontrol
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
