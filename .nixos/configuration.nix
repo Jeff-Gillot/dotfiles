@@ -99,7 +99,7 @@
     ZSH_THEME = "robbyrussell";
   };
 
-  # Install firefox.
+  programs.hyprland.enable = true;
   programs.firefox.enable = true;
   programs.zsh.enable = true;
   programs.zsh.ohMyZsh = {
@@ -120,6 +120,19 @@
     docker
     stow
     git
+    font-awesome
+# Hyprland stuff
+    hyprland
+    hypridle
+    hyprlock
+    hyprpaper
+    wofi
+    waybar
+    hyprpolkitagent
+    swaynotificationcenter
+    sway-audio-idle-inhibit
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
   ];
