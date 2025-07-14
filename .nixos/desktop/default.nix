@@ -17,5 +17,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  programs.zsh.shellAliases = {
+    rebuild = "cd -P /etc/nixos && sudo nixos-rebuild switch --flake .#desktop";
+  };
+
   networking.hostName = "jeff_desktop";
 }
