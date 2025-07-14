@@ -10,5 +10,5 @@
     rebuild = "cd -P /etc/nixos && sudo nixos-rebuild switch --flake .#laptop";
   };
 
-  networking.hostName = "jeff_laptop";
+  networking.hostName = "jeff-laptop";
 }
