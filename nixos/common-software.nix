@@ -95,10 +95,14 @@
     pavucontrol
   ];
 
-  # This is to have file association for dolphin in hyprland
+  #   This is to have file association for dolphin in hyprland
   nixpkgs.overlays = [
-    (import ./dolphin-overlay/default.nix)
+    (import ./dolphin-overlay.nix)
   ];
+
+  programs.zsh.shellAliases = {
+    rebuild = "sudo nixos-rebuild switch -I nixos-config=/home/jeff/dotfiles/nixos/configuration.nix";
+  };
 
   system.stateVersion = "25.05";
 }
