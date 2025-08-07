@@ -93,6 +93,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     pavucontrol
+    vivaldi
   ];
 
   #   This is to have file association for dolphin in hyprland
