@@ -47,7 +47,7 @@
   users.users.jeff = {
     isNormalUser = true;
     description = "jeff";
-    extraGroups = [ "networkmanager" "wheel" "docker"];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = with pkgs; [
     ];
@@ -70,6 +70,7 @@
   # Packages
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
+    jetbrains-toolbox
     gradle
     docker
     stow
@@ -93,7 +94,8 @@
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     pavucontrol
-    vivaldi
+    jdk21
+    google-chrome
   ];
 
   #   This is to have file association for dolphin in hyprland
