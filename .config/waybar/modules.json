@@ -1,16 +1,30 @@
 {
   "hyprland/workspaces": {
-    "all-outputs": true,
-    "disable-scroll": true,
-    "warp-on-scroll": false,
     "format": "{icon}",
     "format-icons": {
+      "1": "●",
+      "2": "●",
+      "3": "●",
+      "4": "●",
+      "5": "●",
+      "11": "●",
+      "12": "●",
+      "13": "●",
+      "14": "●",
+      "15": "●",
       "urgent": "●",
       "active": "⬤",
       "default": "●"
     },
-    "on-scroll-up": "hyprctl dispatch workspace e-1",
-    "on-scroll-down": "hyprctl dispatch workspace e+1"
+    "persistent-workspaces": {
+      "DP-1": [1, 2, 3, 4, 5],
+      "DP-3": [11, 12, 13, 14, 15]
+    },
+    "disable-scroll": false,
+    "on-scroll-up": "~/dotfiles/.config/hypr/switch_workspace.sh prev",
+    "on-scroll-down": "~/dotfiles/.config/hypr/switch_workspace.sh next",
+    "all-outputs": false,
+    "on-click": ""
   },
   "wlr/taskbar": {
     "format": "{icon}",
