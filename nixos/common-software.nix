@@ -96,6 +96,9 @@
     pavucontrol
     jdk21
     google-chrome
+    unrar
+    unar
+    jq
   ];
 
   #   This is to have file association for dolphin in hyprland
