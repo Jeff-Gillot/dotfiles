@@ -31,6 +31,7 @@
         # Rule for the Ergodox EZ
         SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="1307", GROUP="plugdev"
         # Rule for the Planck EZ
+
         SUBSYSTEM=="usb", ATTR{idVendor}=="feed", ATTR{idProduct}=="6060", GROUP="plugdev"
 
       # Wally Flashing rules for the Ergodox EZ

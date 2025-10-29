@@ -1,6 +1,9 @@
 
 { config, pkgs, ... }:
 
+let
+  unstable = import <nixos-unstable> { config = config.nixpkgs.config; };
+in
 {
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -69,8 +72,8 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
-    jetbrains.idea-ultimate
-    jetbrains-toolbox
+    unstable.jetbrains.idea-ultimate
+    unstable.jetbrains-toolbox
     gradle
     docker
     stow
@@ -82,23 +85,26 @@
     temurin-bin
     kitty
     # Hyprland stuff
-    hyprland
-    hypridle
-    hyprlock
-    hyprpaper
-    wofi
-    waybar
-    hyprpolkitagent
-    swaynotificationcenter
-    sway-audio-idle-inhibit
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
+    unstable.hyprland
+    unstable.hypridle
+    unstable.hyprlock
+    unstable.hyprshot
+    unstable.hyprpaper
+    unstable.wofi
+    unstable.waybar
+    unstable.hyprpolkitagent
+    unstable.swaynotificationcenter
+    unstable.sway-audio-idle-inhibit
+    unstable.xdg-desktop-portal
+    unstable.xdg-desktop-portal-hyprland
     pavucontrol
     jdk21
-    google-chrome
+    unstable.google-chrome
     unrar
     unar
     jq
+    discord
+    bambu-studio
   ];
 
   #   This is to have file association for dolphin in hyprland
